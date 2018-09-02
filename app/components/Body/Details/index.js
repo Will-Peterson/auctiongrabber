@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { View, Text, TouchableOpacity } from 'react-native';
+import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
+import Footer from '../../Footer';
 
 export default class AuctionDetails extends Component {
   constructor(props) {
@@ -19,7 +20,7 @@ export default class AuctionDetails extends Component {
   }
   render() {
     return (
-      <View>
+      <View style={styles.detailsContainer}>
         <Text style={{fontSize: 27, color: 'blue', fontWeight: 'bold'}}>
           {this.state.time}
         </Text>
@@ -28,7 +29,10 @@ export default class AuctionDetails extends Component {
         </Text>
         <TouchableOpacity>
           <Text style={{fontSize: 27}}>
-            {'\n' + this.state.address + '\n' + this.state.city + ', ' + this.state.state}
+            {'\n' + this.state.address}
+          </Text>
+          <Text style={{fontSize: 27, textAlign: 'center'}}>
+            {this.state.city + ', ' + this.state.state}
           </Text>
         </TouchableOpacity>
         <TouchableOpacity>
@@ -39,7 +43,16 @@ export default class AuctionDetails extends Component {
         <Text>
           {'\n\n\nAuctioneer: ' + this.state.auctioneer}
         </Text>
+        <Footer />
       </View>
     );
   }
 }
+
+const styles = StyleSheet.create({
+  detailsContainer: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center'
+  }
+});
