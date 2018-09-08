@@ -21,7 +21,7 @@ const styles = StyleSheet.create({
   footerContainer: {
     width: '100%',
     height: 50,
-    backgroundColor: '#FF9800',
+    backgroundColor: '#C0C0C0',
     position: 'absolute',
     bottom: 0
   }

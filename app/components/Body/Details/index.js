@@ -11,6 +11,7 @@ export default class AuctionDetails extends Component {
       day: this.props.navigation.state.params.item.day,
       time: this.props.navigation.state.params.item.time,
       storage_facility: this.props.navigation.state.params.item.storage_facility,
+      units: this.props.navigation.state.params.item.units,
       address: this.props.navigation.state.params.item.address,
       city: this.props.navigation.state.params.item.city,
       state: this.props.navigation.state.params.item.state,
@@ -26,6 +27,9 @@ export default class AuctionDetails extends Component {
         </Text>
         <Text style={{fontSize: 30, fontWeight: 'bold'}}>
           {'\n' + this.state.storage_facility}
+        </Text>
+        <Text style={{fontSize: 27}}>
+          {'Units: ' + this.state.units}
         </Text>
         <TouchableOpacity>
           <Text style={{fontSize: 27}}>
